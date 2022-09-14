@@ -4,6 +4,7 @@
 #include <string>
 #include "Led.h"
 #include "LightState.h"
+#include "LCD.h"
 
 // enum {LIGHT_OFF, LIGHT_1, LIGHT_2, LIGHT_3, LIGHT_4, LIGHT_5};
 
@@ -16,9 +17,10 @@ private:
     Led *light3;
     Led *light4;
     Led *light5;
+    LCD *lcd;
 
 public:
-    View(Led *led1, Led *led2, Led *led3, Led *led4, Led *led5);
+    View(Led *led1, Led *led2, Led *led3, Led *led4, Led *led5, LCD *Lcd);
     virtual ~View();
     void setState(int state);
     void lightView();
@@ -28,6 +30,12 @@ public:
     void lightOn_4();
     void lightOn_5();
     void lightOff();
+    void LCDplay0();
+    void LCDplay1();
+    void LCDplay2();
+    void LCDplay3();
+    void LCDplay4();
+    void LCDplay5();
 };
 
 #endif /* __VIEW_H__ */
